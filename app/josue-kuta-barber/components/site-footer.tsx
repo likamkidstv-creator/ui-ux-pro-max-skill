@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const nav = [
   { href: "#home", label: "Accueil" },
   { href: "#services", label: "Services" },
@@ -28,10 +30,21 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <div className="font-[family-name:var(--font-bebas)] text-4xl leading-none">
-              Josué <span className="text-[#C4A050]">Kuta</span>
+            <div className="mb-4 flex items-center gap-3">
+              <Image
+                src="/jk-logo.png"
+                alt="Josué Kuta Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 object-contain"
+              />
+              <div>
+                <div className="font-[family-name:var(--font-bebas)] text-3xl leading-none">
+                  Josué <span className="text-[#C4A050]">Kuta</span>
+                </div>
+              </div>
             </div>
-            <div className="mb-4 mt-1 text-[9px] uppercase tracking-[0.3em] text-[#F5F5F5]/20">
+            <div className="mb-4 text-[9px] uppercase tracking-[0.3em] text-[#F5F5F5]/20">
               Master Barber · Pro Max Edition · Ottawa
             </div>
             <p className="max-w-[230px] font-[family-name:var(--font-playfair)] text-sm italic leading-relaxed text-[#F5F5F5]/35">

@@ -1,5 +1,4 @@
-const LOGO_URL =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2030%20mai%202026%2C%2015%20h%2041%20min%2046%20s-1xTCa7tTJotfiPNmr6lZL2w7rYjNCh.png"
+const LOGO_URL = "/jk-logo.png"
 
 export function HeroSection() {
   return (
