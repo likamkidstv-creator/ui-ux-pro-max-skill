@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { User } from "lucide-react"
 
 const links = [
@@ -32,9 +33,14 @@ export function SiteNav() {
       }`}
     >
       <a href="#home" className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#C4A050] font-[family-name:var(--font-playfair)] text-sm font-bold text-[#C4A050]">
-          JK
-        </span>
+        <Image
+          src="/jk-logo.png"
+          alt="Josué Kuta Logo"
+          width={40}
+          height={40}
+          className="h-10 w-10 object-contain"
+          priority
+        />
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F5F5F5]">
           Josué <span className="text-[#C4A050]">Kuta</span>
         </span>
