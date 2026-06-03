@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useMemo } from "react"
 
 // Seeded random number generator for consistent values
 function seededRandom(seed: number) {
@@ -9,12 +9,6 @@ function seededRandom(seed: number) {
 }
 
 function FloatingPaths({ position }: { position: number }) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   const paths = useMemo(() => {
     return Array.from({ length: 24 }, (_, i) => {
       // Use seeded random for consistent SSR/client values
@@ -41,10 +35,6 @@ function FloatingPaths({ position }: { position: number }) {
       }
     })
   }, [position])
-
-  if (!mounted) {
-    return null
-  }
 
   return (
     <div className="absolute inset-0 pointer-events-none">
@@ -89,12 +79,6 @@ function FloatingPaths({ position }: { position: number }) {
 }
 
 function FlippedFloatingPaths({ position }: { position: number }) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   const paths = useMemo(() => {
     return Array.from({ length: 24 }, (_, i) => {
       // Use seeded random for consistent SSR/client values
@@ -115,10 +99,6 @@ function FlippedFloatingPaths({ position }: { position: number }) {
       }
     })
   }, [position])
-
-  if (!mounted) {
-    return null
-  }
 
   return (
     <div className="absolute inset-0 pointer-events-none">

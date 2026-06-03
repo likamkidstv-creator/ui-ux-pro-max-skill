@@ -1,21 +1,23 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { AnimatedFeaturesSection } from "@/components/animated-features-section"
-import { PricingSection } from "@/components/pricing-section"
-import { FAQSection } from "@/components/faq-section"
-import { AnimatedCTASection } from "@/components/animated-cta-section"
+import { ServicesSection } from "@/components/services-section"
+import { PortfolioSection } from "@/components/portfolio-section"
+import { AboutSection } from "@/components/about-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-20">
+      <main>
         <HeroSection />
-        <AnimatedFeaturesSection />
-        <PricingSection />
-        <FAQSection />
-        <AnimatedCTASection />
+        <ServicesSection />
+        <PortfolioSection />
+        <AboutSection />
+        <TestimonialsSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

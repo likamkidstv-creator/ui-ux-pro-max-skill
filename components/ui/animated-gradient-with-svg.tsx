@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useMemo, useRef, useState, useEffect } from "react"
+import { useMemo, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { useDimensions } from "@/components/hooks/use-debounced-dimensions"
 
@@ -24,11 +24,6 @@ function seededRandomInt(seed: number, min: number, max: number) {
 const AnimatedGradient: React.FC<AnimatedGradientProps> = ({ colors, speed = 5, blur = "light" }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const dimensions = useDimensions(containerRef)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const randomValues = useMemo(() => {
     return colors.map((_, index) => {
@@ -58,10 +53,6 @@ const AnimatedGradient: React.FC<AnimatedGradientProps> = ({ colors, speed = 5, 
   }, [dimensions.width, dimensions.height])
 
   const blurClass = blur === "light" ? "blur-2xl" : blur === "medium" ? "blur-3xl" : "blur-[100px]"
-
-  if (!mounted) {
-    return <div ref={containerRef} className="absolute inset-0 overflow-hidden" />
-  }
 
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">
