@@ -1,82 +1,98 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* LIKAM DIGITAL STUDIO — Luxury dark palette */
+  --background: #0b0b0f;
+  --foreground: #f5f5f5;
+  --card: #111116;
+  --card-foreground: #f5f5f5;
+  --popover: #111116;
+  --popover-foreground: #f5f5f5;
+  /* Gold = primary brand accent */
+  --primary: #d4af37;
+  --primary-foreground: #0b0b0f;
+  --secondary: #1a1a22;
+  --secondary-foreground: #f5f5f5;
+  --muted: #1a1a22;
+  --muted-foreground: #a7a7a7;
+  --accent: #d4af37;
+  --accent-foreground: #0b0b0f;
+  --destructive: #ef4444;
+  --destructive-foreground: #f5f5f5;
+  --border: #2a2a35;
+  --input: #1a1a22;
+  --ring: rgba(212, 175, 55, 0.4);
+  --chart-1: #d4af37;
+  --chart-2: #a7a7a7;
+  --chart-3: #2a2a35;
+  --chart-4: #1a1a22;
+  --chart-5: #0b0b0f;
+  --radius: 0.375rem;
+  --sidebar: #0b0b0f;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0b0b0f;
+  --sidebar-accent: #1a1a22;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: #2a2a35;
+  --sidebar-ring: rgba(212, 175, 55, 0.4);
+  /* Brand-specific extras */
+  --gold: #d4af37;
+  --gold-light: #f7e7a1;
+  --silver: #a7a7a7;
+  --background-gradient-speed: 15s;
+  --background-gradient-delay: 0s;
+  --tx-1: 1;
+  --ty-1: 1;
+  --tx-2: -1;
+  --ty-2: 1;
+  --tx-3: 1;
+  --ty-3: -1;
+  --tx-4: -1;
+  --ty-4: -1;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: #0b0b0f;
+  --foreground: #f5f5f5;
+  --card: #111116;
+  --card-foreground: #f5f5f5;
+  --popover: #111116;
+  --popover-foreground: #f5f5f5;
+  --primary: #d4af37;
+  --primary-foreground: #0b0b0f;
+  --secondary: #1a1a22;
+  --secondary-foreground: #f5f5f5;
+  --muted: #1a1a22;
+  --muted-foreground: #a7a7a7;
+  --accent: #d4af37;
+  --accent-foreground: #0b0b0f;
+  --destructive: #ef4444;
+  --destructive-foreground: #f5f5f5;
+  --border: #2a2a35;
+  --input: #1a1a22;
+  --ring: rgba(212, 175, 55, 0.4);
+  --chart-1: #d4af37;
+  --chart-2: #a7a7a7;
+  --chart-3: #2a2a35;
+  --chart-4: #1a1a22;
+  --chart-5: #0b0b0f;
+  --sidebar: #0b0b0f;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0b0b0f;
+  --sidebar-accent: #1a1a22;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: #2a2a35;
+  --sidebar-ring: rgba(212, 175, 55, 0.4);
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -113,6 +129,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-silver: var(--silver);
+  --animate-background-gradient: background-gradient var(--background-gradient-speed, 15s)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
 
 @layer base {
@@ -122,4 +143,37 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes background-gradient {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    animation-delay: var(--background-gradient-delay, 0s);
+  }
+  20% {
+    transform: translate(calc(100% * var(--tx-1, 1)), calc(100% * var(--ty-1, 1)));
+  }
+  40% {
+    transform: translate(calc(100% * var(--tx-2, -1)), calc(100% * var(--ty-2, 1)));
+  }
+  60% {
+    transform: translate(calc(100% * var(--tx-3, 1)), calc(100% * var(--ty-3, -1)));
+  }
+  80% {
+    transform: translate(calc(100% * var(--tx-4, -1)), calc(100% * var(--ty-4, -1)));
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+.animate-background-gradient {
+  animation: background-gradient var(--background-gradient-speed, 15s) cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
